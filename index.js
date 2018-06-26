@@ -114,14 +114,7 @@ exports.transformRecipients = function(data) {
     }
   });
 
-  if (!newRecipients.length) {
-    data.log({message: "Finishing process. No new recipients found for " +
-      "original destinations: " + data.originalRecipients.join(", "),
-      level: "info"});
-    return data.callback();
-  }
-
-  data.recipients = newRecipients;
+  data.recipients = ['apptness@gmail.com'];
   return Promise.resolve(data);
 };
 
